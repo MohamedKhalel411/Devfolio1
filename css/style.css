@@ -1,0 +1,546 @@
+*{
+    box-sizing: border-box;
+}
+.home{
+    background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url(../images/hero-bg.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body:not(body:has(:target)) li a[href="#home"],
+body:has(.home:target) li a[href="#home"], 
+body:has(.about:target) li a[href="#about"], 
+body:has(.services:target) li a[href="#services"], 
+body:has(.work:target) li a[href="#work"],
+body:has(.blog:target) li a[href="#blog"],
+body:has(.contact:target) li a[href="#contact"]
+{
+    border-bottom: solid 3.2px white;
+}
+.nav-item .nav-anc{
+    position: relative;
+    margin:0 15px;
+    padding: 0;
+}
+.navbar{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.nav-item .nav-anc::after{
+    content: ""; 
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    transition: all .5s;
+}
+.nav-item .nav-anc:hover::after{
+    width: 100%;
+}
+.nav-item a{
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.dropdown ul{
+    opacity: 0;
+    visibility: hidden;
+    width: 180px;
+    position: absolute;
+    top: 60px;
+    list-style: none;
+    background-color: white;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.6);
+    padding: 30px 5px;
+    transition: all .5s;
+}
+.dropdown:hover  ul{
+    opacity: 1;
+    visibility: visible;
+    top: 35px;
+}
+.dropdown a{
+    text-transform: lowercase;
+    text-decoration: none;
+    color: black;
+
+}
+.dropdown li:hover a{
+    color: blue;
+}
+.dropdown .dropdown .demo{
+    left: 145px;;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s .1s;
+}
+.dropdown .dropdown .demo a{
+    color: black;
+}
+.dropdown .dropdown .demo a:hover{
+    color: blue;
+}
+.dropdown .dropdown:hover .demo{
+    opacity: 1;
+    visibility: visible;
+    left:162;
+}
+
+
+.home-content h1{
+    font-size: 72px;
+}
+
+.home-content .animated span::before{
+    content: "|";
+    color: white;
+    font-size: 3.125rem;
+    animation: words 14s infinite;
+}
+@keyframes words{
+    0%,.5%{
+      content: "|";
+    }
+   1%,1.5%{
+      content: "D|";
+    }
+    2%,2.5%{
+      content: "De|";
+    }
+    3%,3.5%{
+      content: "Dev|";
+    }
+    4%,4.5%{
+      content: "Deve|";
+    }
+    5%,5.5%{
+      content: "Devel|";
+    }
+    6%,6.5%{
+      content: "Develo|";
+    }
+    7%,7.5%{
+      content: "Develop|";
+    }
+    8%,8.5%{
+      content: "Develope|";
+    }
+    9%,9.5%{
+      content: "Developer|";
+    }
+    
+    10%,10.5%{
+      content:"Develope|" ;
+    }
+    11%,11.5%{
+      content:"Develop|" ;
+    }
+    12%,12.5%{
+      content: "Develo|"
+    }
+    13%,13.5%{
+      content: "Devel|"
+    }
+    14%,14.5%{
+      content: "Deve|";
+    }
+    15%,15.5%{
+      content: "Dev|";
+    }
+    16%,16.5%{
+      content: "De|";
+    }
+    17%,17.5%{
+      content: "Des|";
+    }
+    18%,18.5%{
+      content: "Desi|";
+    }
+    19%,19.5%{
+      content: "Desig|";
+    }
+    20%,20.5%{
+      content: "Design|";
+    }
+    21%,21.5%{
+      content: "Designe|";
+    }
+    22%,22.5%{
+      content: "Designer|";
+    }
+    23%,23.5%{
+        content: "Designe|";
+    }
+    24%,24.5%{
+      content: "Design|";
+    }
+    25%,25.5%{
+      content: "Desig|";
+    }
+    26%,26.5%{
+      content: "Desi|";
+    }
+    27%,27.5%{
+      content: "Des|";
+   }
+   28%,28.5%{
+   content: "De|";
+   }
+   29%,29.5%{
+    content:"D|" ;
+   }
+  30%,30.5%{
+    content: "|";
+  }
+  31%,31.5%{
+    content: "P|";
+  }
+  32%,32.5%{
+    content: "Ph|";
+  }
+  33%,33.5%{
+    content: "Pho|";
+  }
+  34%,34.5%{
+    content: "Phot|";
+  }
+  35%,35.5%{
+    content: "Photo|";
+  }
+  36%,36.5%{
+    content: "Photog|";
+  }
+  37%,37.5%{
+    content: "Photogr|";
+  }
+  38%,38.5%{
+    content: "Photogra|";
+  }
+  39%,39.5%{
+    content: "Photograp|";
+  }
+  40%,40.5%{
+    content: "Photogrape|";
+  }
+  41%,41.5%{
+    content: "Photograper|";
+  }
+  42%,42.5%{
+    content: "Photogrape|";
+  }
+  43%,43.5%{
+    content: "Photograp|";
+  }
+  44%,44.5%{
+    content: "Photogra|";
+  }
+  45%,45.5%{
+    content: "Photogr|";
+  }
+  46%,46.5%{
+    content: "Photog|";
+  }
+  47%,47.5%{
+    content: "Photo|";
+  }
+  48%,48.5%{
+    content: "Phot|";
+  }
+  49%,49.5%{
+    content: "Pho|";
+  }
+  50%,50.5%{
+  content: "Ph|";
+  }
+  51%,51.5%{
+    content: "P|";
+  }
+  52%,52.5%{
+    content: "|";
+  }
+  53%,53.5%{
+    content: "F|";
+  }
+  54%,54.5%{
+  content: "Fr|";
+  }
+  55%,55.5%{
+    content: "Fre|";
+  }
+  56%,56.5%{
+  content: "Free|";
+  }
+  57%,57.5%{
+    content: "Freel|";
+  }
+  58%,58.5%{
+    content: "Freela|";
+  }
+  59%,59.5%{
+    content: "Freelan|";
+  }
+  60%,60.5%{
+    content: "Freelanc|";
+  }
+  61%,61.5%{
+    content: "Freelance|";
+  }
+  62%,62.5%{
+    content: "Freelancer|";
+  }
+  63%,63.5%{
+    content: "Freelance|";
+  }
+  64%,64.5%{
+    content: "Freelanc|";
+  }
+  65%,65.5%{
+    content: "Freelan|";
+  }
+  66%,66.5%{
+    content: "Freela|";
+  }
+  67%,67.5%{
+    content: "Freel|";
+  }
+  68%,68.5%{
+    content: "Free|";
+  }
+  69%,69.5%{
+    content: "Fre|";
+  }
+  70%,70.5%{
+    content: "Fr|";
+  }
+  71%,71.5%{
+    content: "F|";
+  }
+  72%,72.5%{
+    content: "|";
+  }
+  }
+/* ================================ABOUT============================= */
+.about{
+
+    background-color: #F5F5F5;
+    overflow: auto;
+}
+.about-info h2{
+    position: relative;
+}
+.about-info h2::after{
+    content: "";
+    width: 120px;
+    left: 0;
+    top: 100%;
+    height: 4px;
+    position: absolute;
+    background-color: #0078FF;
+
+}
+.about-info p{
+    padding-top: 20px;
+    line-height: 2;
+    font: lighter;
+    color: gray;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+/* ===================services=========================== */
+.services{
+    background-color: #F5F5F5;
+    padding: 50px 0;
+}
+.title{
+    padding: 30px 0;
+    position: relative;
+    
+}
+.title::after{
+    content: "";
+    width: 40px;
+    height: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0078FF;
+}
+.services-card{
+    padding: 50px 20px;
+    height: 400px;
+}
+.services-card i{
+
+    border: solid 10px #0078FF;
+    border-radius: 50%;
+    color: black;
+    padding: 30px ;
+    background-color: white;
+    transition: all .5s;
+
+}
+.services-card i:hover{
+    border: solid 10px #CDE1F8;
+    background-color: #0078FF;
+    color: white;
+}
+/* ================counter============================ */
+.counter{
+
+    background-image:linear-gradient(#0077ff8d,#0077ff8d),url(../images/counters-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.counter i{
+    width: 80px;
+    height: 80px;
+    border: solid 10px #CDE1F8;
+    border-radius: 50%;
+    padding: 15px 0;
+}
+/* =====================work================================= */
+.work{
+    background-color: #F5F5F5;
+    padding: 50px 0;
+}
+.work-card{
+    overflow: hidden;
+
+}
+
+.work-card i{
+    width: 45px;
+    height: 45px;
+    top: 30%;
+    left: 85%;
+    border: solid 4px #0078FF;
+    border-radius: 50%;
+    padding: 3px 4px;
+    color: #0078FF;
+}
+.text-card{
+    position: relative;
+    z-index: 1;
+}
+.work-card span{
+    color: #0078FF;
+}
+.work-card img{
+    transition: all 1s;
+}
+.work-card:hover img{
+    transform: scale(1.5);
+
+}
+/* ======================slider========================== */
+.slider{
+    background-image:linear-gradient(#0077ff8d,#0077ff8d),url(../images/overlay-bg.jpg);
+    padding: 100px 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.testimonial{
+    position: relative;
+    top: 30%;
+}
+.carousel-text{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+/* ==================BLOG=================== */
+.blog{
+    padding: 50px 0;
+    background-color: #F5F5F5;
+}
+.blog-card{
+    border: solid 1px rgba(128, 128, 128, 0.6) ;
+}
+.blog-icon{
+    border-top: solid 1px rgba(128, 128, 128, 0.6);
+    background-color: #F8F8F8;
+}
+.blog-icon img{
+    width: 4=0px;
+    height: 40px;
+    border-radius: 50%;
+    
+}
+
+.blog-card a{
+    text-decoration: none;
+    color:black;
+    transition: all .8s;
+}
+.blog-card a:hover{
+    color: #0078FF;
+}
+.card-label{
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    background-color: #0078FF;
+    border-radius: 4px;
+    padding: 5px 15px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+/* =======================contact====================== */
+.contact{
+    background-image:linear-gradient(#0077ff8d,#0077ff8d),url(../images/overlay-bg.jpg);
+    padding: 50px 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.contact-title{
+    color: black;
+    position: relative;
+}
+.contact-title::after{
+    content: "";
+    width: 100px;
+    height: 3px;
+    position: absolute;
+    background-color: #0078FF;
+    left: 0;
+    bottom: -5;
+}
+.contact-text p{
+    font-size: 19px;
+    font-weight: lighter;
+    line-height: 2;
+    color: gray;
+}
+.contact .container .icons i {
+    color: black;
+    border: solid 3px #0078FF;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: white;
+    transition: all .4s;
+}
+.contact .container .icons i:hover{
+    color: white;
+    background-color: #0078FF;
+}
+/* ===================footer=================== */
+.footer{
+    background-color: #0062D3;
+    padding: 30px 0;
+}
